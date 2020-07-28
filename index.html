@@ -4,10 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        body{
+            text-align: center;
+            background-image: url('ToDo.jpg');
+        }
+        .btn{
+            background-color: aqua;
+            margin-left: 50px;
+            margin-right: 10px;
+            position: relative;
+        }
+        .btn2{
+            background-color: aquamarine;
+            display: inline-block;
+            position: relative;
+            
+        }
+        .Todo_Header{
+            background-color: palevioletred;
+            color: white;
+            display: inline-block;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 5px;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .Todo_main{
+            margin-top: 20px;
+        }
+        button{
+            border-radius: 20px;
+            border: none;
+            background-color: white;
+            padding: 7px;
+            color: gray;
+            -webkit-box-shadow: 0px 0px 26px -12px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 26px -12px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 26px -12px rgba(0,0,0,0.75);
+        }
+        input{
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            -webkit-box-shadow: 0px 0px 26px -12px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 26px -12px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 26px -12px rgba(0,0,0,0.75);
+        }
+        .LiPadding{
+            margin: 0 auto;
+            margin-top: 10px;
+            color: gray;
+            background-color: white;
+            align-items: center;
+            width: 400px;
+            border-radius: 20px;
+            padding: 3px;
+            -webkit-box-shadow: 0px 0px 26px -12px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 26px -12px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 26px -12px rgba(0,0,0,0.75);
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="Todo_Header">
+        <img src="to-do.png" width="50px" alt=""><h1>To-Do App</h1>
+    </div>
+    <div class="Todo_main">
+        <input type="text" id="todo-item" placeholder="Enter To-Do" >
+        <button onclick="addTodo()">ADD ITEM</button>
+        <button onclick="deleteAll()">DELETE ALL </button>
+    </div>
+
+    <div class="ToDoList">
+        <ul id="list">
+
+        </ul>
+    </div>
 
     <script src="app.js"></script>
+
 </body>
 </html>
